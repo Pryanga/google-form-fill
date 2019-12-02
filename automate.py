@@ -1,20 +1,26 @@
-import os
-import requests
-import csv
+import argparse
+
 import pandas as pd
+import requests
+import json
 
-form_id = "1FAIpQLScmz8YGHstPcRaBjPf5K5w3Ror_3y7mvZoaZBoQTO7PM1IjQQ"
-name_id = "entry.1018914776"
-email_id = "entry.322905232"
-add_id = "entry.1170598938"
+# parser = argparse.ArgumentParser(description="Pass in the URL and field IDs")
 
-url = "https://docs.google.com/forms/d/e/1FAIpQLScmz8YGHstPcRaBjPf5K5w3Ror_3y7mvZoaZBoQTO7PM1IjQQ/formResponse"
+# parser.add_argument('csv_fp', type=str, help="Pass the file path of the csv file")
 
-# todo: read in csv file
+
+
 csv_fp = "./automate.csv"
 csv_df = pd.read_csv(csv_fp)
 
-# todo: read evey entry in loop
+with open('./ids.json') as json_file:
+    form_field = json.load(json_file)
+
+form_id = form_field['form_id']
+name_id = form_field['name_id']
+email_id = form_field['email_id']
+add_id = form_field['add_id']
+url = form_field['url']
 
 def submit(url, submission):
     response = requests.post(url, submission)
