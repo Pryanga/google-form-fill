@@ -16,7 +16,7 @@ csv_df = pd.read_csv(args.csv_fp)
 with open('./ids.json') as json_file:
     form_field = json.load(json_file)
 
-form_id = form_field['form_id']
+# form_id = form_field['form_id']
 name_id = form_field['name_id']
 email_id = form_field['email_id']
 add_id = form_field['add_id']
@@ -33,9 +33,9 @@ for index, row in csv_df.iterrows():
     email = row['Email']
     address = row['Address']
 
-    submission = {"entry.1018914776": name,
-                  "entry.322905232": email,
-                  "entry.1170598938": address}
+    submission = {name_id: name,
+                  email_id: email,
+                  add_id: address}
 
     submit(url, submission)
 
