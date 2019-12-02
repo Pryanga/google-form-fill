@@ -4,14 +4,14 @@ import pandas as pd
 import requests
 import json
 
-# parser = argparse.ArgumentParser(description="Pass in the URL and field IDs")
+parser = argparse.ArgumentParser(description="Pass in the URL and field IDs")
 
-# parser.add_argument('csv_fp', type=str, help="Pass the file path of the csv file")
+parser.add_argument('csv_fp', type=str, help="Pass the file path of the csv file")
 
+args = parser.parse_args()
 
-
-csv_fp = "./automate.csv"
-csv_df = pd.read_csv(csv_fp)
+# csv_fp = "./automate.csv"
+csv_df = pd.read_csv(args.csv_fp)
 
 with open('./ids.json') as json_file:
     form_field = json.load(json_file)
