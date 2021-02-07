@@ -9,7 +9,8 @@ Simple code to submit multiple google forms with information organised in .csv f
     a. form url
     
     b. the ids of the fields to be filled in the form obtained by inspecting the form page using chrome inspection:
-        `ctrl+shift+i, ctrl+f:"entry."`
+    
+    `ctrl+shift+i, ctrl+f:"entry."`
     
     - Make sure that each id corresponds with its question because they sometimes appear out of order
     
