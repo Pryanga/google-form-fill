@@ -1,6 +1,7 @@
-{
-  "name_id" : "entry.1099914776",
-  "email_id" : "entry.322775232",
-"add_id" : "entry.1170594538",
-"url" : "https://docs.google.com/forms/d/e/1FAIpQLScmz8YGgetPcRaBjPf5K5w3Ror_3y7mvZoaZBoQTO7PM1IjQQ/formResponse"
+{   
+    "BUTTON_ID"     : "entry.2049835687", 
+    "TEXT_ID"       : "entry.196760255", 
+    "DROPDOWN_ID"   : "entry.818708028", 
+    "CHECKBOX_ID"   : "entry.840195886", 
+    "URL"           : "https://docs.google.com/forms/d/e/1FAIpQLSfDnkohgp9tlY-MsP2fgWgXnTFSwPLaDHBhC9cunAn4wifX7A/formResponse" 
 }

@@ -8,21 +8,24 @@ Simple code to submit multiple google forms with information organised in .csv f
 
     a. form url
     
-    b. the ids of the fields to be filled in the form obtained by insepcting the form page using chrome inspection
+    b. the ids of the fields to be filled in the form obtained by inspecting the form page using chrome inspection (ctrl+shift+i, ctrl+f, "entry.")
+    
+    - Make sure that each id corresponds with its question because they sometimes appear out of order
     
 2) Edit the .json file with the required data obtained in step 1
-3) Install the requirements.txt in the terminal window
-4) Run the code form the command line and pass the path of the csv file. For example
+    - Separate inputs for checkbox questions with ", "
+3) Install the packages listed in requirements.txt
+4) Run the code from the command line and pass the path of the csv file. For example:
 
     `python3 ./automate/py ./automate.csv`
 
 ## Editing the Python Code
 
-If you have different fields than the ones mentioned in the json file, then edit:
+If you have different fields than the ones mentioned in the json file:
 
-1) Edit the ids.json file
-2) Edit the automate.py
+1) Edit ids.json
+2) Edit automate.py
 
-_This tasks requires python knowledge_
+_These tasks require python knowledge_
         
   
